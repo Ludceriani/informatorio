@@ -14,3 +14,6 @@ def inicio(request):
 		"productos": productos
 	}
 	return render(request,"inicio.html", context)
+
+def login(request):
+	return render(request,"login.html")
