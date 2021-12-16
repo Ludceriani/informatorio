@@ -8,3 +8,5 @@ class Usuario(AbstractUser):
 	# foto = models.ImageField()
 	class Meta:
 		db_table="usuarios"
+
+	
