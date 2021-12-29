@@ -5,9 +5,4 @@ class Producto(models.Model):
 	precio = models.DecimalField(max_digits=9, decimal_places=2)
 
 	class Meta:
-		db_table="productos" 
-
-	def __str__(self):
-		return f"{self.first_name}"
-
-	 
+		db_table="productos"
