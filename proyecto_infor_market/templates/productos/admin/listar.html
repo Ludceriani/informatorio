@@ -4,12 +4,12 @@
     
   <div class="row" style="padding:10px">
     <div class="col">
-      <button type="button" class="btn btn-success">Nuevo</button>
-    </div>
+      <a href="{% url 'productos:admin_nuevo' %}" class="btn btn-success">Nuevo</a>
+    </div> 
   </div>
   <table class="table table-success table-striped">
     <thead>
-      <th scope="col">ID</th>
+      <th scope="col">ID</th> 
       <th scope="col">Nombre</th>
       <th scope="col">Precio </th>
       <th scope="col">Acciones</th>
@@ -20,6 +20,11 @@
           <th scope="row">{{p.id}}</th>
           <td>{{p.nombre}}</td>
           <td>${{p.precio}}</td>
+          <td>
+            <a href="">Ver</a>
+            <a href="">Editar</a>
+            <a href="">Eliminar</a>
+          </td>
         </tr>
       {% endfor %}              
     </tbody>
