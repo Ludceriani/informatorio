@@ -1,22 +1,30 @@
 {% extends "base/base.html" %}
 
 {% block contenido %}
-<table class="table table-success table-striped">
-  <table class="table">
-  <thead>
-    <tr>
+    
+  <div class="row" style="padding:10px">
+    <div class="col">
+      <button type="button" class="btn btn-success">Nuevo</button>
+    </div>
+  </div>
+  <table class="table table-success table-striped">
+    <thead>
       <th scope="col">ID</th>
       <th scope="col">Nombre</th>
+      <th scope="col">Precio </th>
       <th scope="col">Acciones</th>
-    </tr>
-  </thead>
-  <tbody>
-            
-  </tbody>
-   
-   
-</table>
-</table>
+    </thead>
+    <tbody>
+      {% for p in productos %}
+        <tr>
+          <th scope="row">{{p.id}}</th>
+          <td>{{p.nombre}}</td>
+          <td>${{p.precio}}</td>
+        </tr>
+      {% endfor %}              
+    </tbody>
+    
+  </table>
 
 {% endblock contenido %}
 
