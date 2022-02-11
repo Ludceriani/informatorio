@@ -1,19 +1,11 @@
-html,
 body {
-    height: 100%;
-  }
-body {
-    display: flex;
-    align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background-color: #82FA58;
-    font-family: sans-serif;
-    }
+  background-color: blue;
+}
 
   .form-signin {
     width: 100%;
     max-width: 330px;
+
     padding: 15px;
     margin: auto;
   }

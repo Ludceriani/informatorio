@@ -22,8 +22,8 @@
           <td>${{p.precio}}</td>
           <td>
             <a href="">Ver</a>
-            <a href="">Editar</a>
-            <a href="">Eliminar</a>
+            <a href="{% url 'productos:admin_editar' p.id %}">Editar</a>
+            <a href="{% url 'productos:eliminar_admin' p.id %}">Eliminar</a>
           </td>
         </tr>
       {% endfor %}              
