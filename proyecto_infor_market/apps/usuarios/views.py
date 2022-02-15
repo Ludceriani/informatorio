@@ -5,7 +5,7 @@ from .models                     import Usuario
 from .forms                      import UsuarioForm
 
 class Registrarme(CreateView):
-    template_name = "usuarios/registrar.html"
+    template_name = "usuario/registrar.html"
     model= Usuario
     form_class = UsuarioForm
 
