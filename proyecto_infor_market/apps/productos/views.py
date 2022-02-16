@@ -6,14 +6,14 @@ from django.views.generic.edit 	 import UpdateView
 from .forms 			  		 import ProductoForm
 from .models              		 import Producto
 from django.contrib.auth.mixins  import LoginRequiredMixin
-
+from apps.core.mixins            import AdminRequiredMixins
 
 
 def detalle(request):
 	context = {}	
 	return render(request, "productos/detalle.html", context)
 
-class ListarAdmin(ListView):
+class ListarAdmin(LoginRequiredMixin,AdminRequiredMixins, ListView):
 	template_name="productos/admin/listar.html"
 	model = Producto
 	context_object_name="productos"
