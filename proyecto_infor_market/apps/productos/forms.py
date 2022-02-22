@@ -5,11 +5,11 @@ from datetime     import datetime
 
 class ProductoForm(forms.ModelForm):
 	titulo = forms.CharField(label="Nombre del producto", widget=forms.TextInput(attrs={"class":"form-control", "placeholder":"Por favor ingrese nombre"}))
-	imagen=forms.CharField(label="Fotografía URL", widget=forms.TextInput(attrs={"class": "form-control", "placeholder":"Ingrese la URL foto"}))
+	imagen = forms.CharField(label="Fotografía URL", widget=forms.TextInput(attrs={"class": "form-control", "placeholder":"Ingrese la URL foto"}))
 
 	class Meta:
 		model = Producto
-		fields = ["nombre", "precio"]
+		fields = ["nombre", "precio", "imagen"]
 	
 
 """class DateInput(forms.DateInput):
